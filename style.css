@@ -6,7 +6,7 @@ body {
     height: 100vh;
     background: linear-gradient(45deg, #ff5733, #33ff57, #3357ff);
     background-size: 200% 200%;
-    animation: gradientAnimation 6s infinite alternate, zoomAnimation 4s infinite alternate ease-in-out;
+    animation: gradientAnimation 6s infinite alternate;
     margin: 0;
 }
 
@@ -22,16 +22,7 @@ body {
     }
 }
 
-@keyframes zoomAnimation {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.1);
-    }
-}
-
-
+/* Efek Zoom in-out untuk Kartu Nama */
 .card {
     width: 300px;
     background: white;
@@ -40,7 +31,18 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
+    animation: zoomAnimation 3s infinite alternate ease-in-out;
 }
+
+@keyframes zoomAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
 
 .profile img {
     width: 100px;
